@@ -31,7 +31,7 @@ A continuació es detalla la missatgeria corresponent al bloc de dades específi
 ## 3.1 Sol·licitud de publicació
 
 ---
-!!! . Aquesta modalitat es serveix tant pel frontal síncron com asíncron però NO s'accepten lots de sol·licituds degut a que la pròpia definició de la missatgeria de l&#39;enviament ja suporta l'enviament d&#39;una remesa d'anuncis.
+!!!Aquesta modalitat es serveix tant pel frontal síncron com asíncron però NO s'accepten lots de sol·licituds degut a que la pròpia definició de la missatgeria de l&#39;enviament ja suporta l'enviament d&#39;una remesa d'anuncis.
 
 ---
 
