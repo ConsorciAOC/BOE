@@ -19,7 +19,7 @@ Les operacions disponibles a través del servei són les que es presenten a cont
 | --- |
 | BOE (Boletín Oficial del Estado) |
 
-| **PRODUCTE** | **MODALITAT** | **DESCRIPCIO** |
+| **PRODUCTE** | **MODALITAT** | **DESCRIPCIÓ** |
 | --- | --- | --- |
 | **BOE** | BOE | Operacions del servei de publicació del BOE:<ul><li>Sol·licitud de publicació d&#39;un anunci.</li><li>Consulta d&#39;estat d&#39;enviaments i anuncis que s&#39;han enviat.</li><li>Anul·lació de publicació.</li>|
 
