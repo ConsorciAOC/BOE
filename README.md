@@ -42,15 +42,10 @@ En cas de transferència per MTOM, el fitxer corresponent a la remesa s&#39;ha d
 
 | _Element_ | _Descripció_ |
 | --- | --- |
-| //Ficheros/Fichero/Contenido | XML codificat en Base64 amb la informació dels anuncis a publicar en cas de transferència per MTOM (en la crida correspon a la referència XOP del fitxer). El contingut del XML ha d&#39;estar codificat en UTF-8.
- El BOE recomana una grandària màxima de 2MB tot i que el servei del CAOC accepta fins a una grandària de 10MB.
- Per més detalls sobre l&#39;estructura del XML consulteu l&#39;apartat 3.1.2.1 d&#39;aquest document.
- |
-| --- | --- |
-| //Ficheros/Fichero/Id | Identificador del fitxer referenciat a la missatgeria específica (//peticioEnviamentAnunci/id).
- |
+| //Ficheros/Fichero/Contenido | <li>XML codificat en Base64 amb la informació dels anuncis a publicar en cas de transferència per MTOM (en la crida correspon a la referència XOP del fitxer). El contingut del XML ha d&#39;estar codificat en UTF-8.<li>El BOE recomana una grandària màxima de 2MB tot i que el servei del CAOC accepta fins a una grandària de 10MB.<li> Per més detalls sobre l&#39;estructura del XML consulteu l&#39;apartat 3.1.2.1 d&#39;aquest document. |
+| //Ficheros/Fichero/Id | Identificador del fitxer referenciat a la missatgeria específica (//peticioEnviamentAnunci/id).|
 
-### 3.1.2Petició – dades específiques
+### 3.1.2 Petició – dades específiques
 
 ![](RackMultipart20211018-4-xdh4u_html_22ac15b5fb5cdacd.png)
 
