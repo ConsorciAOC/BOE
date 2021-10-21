@@ -45,6 +45,8 @@ En cas de transferència per MTOM, el fitxer corresponent a la remesa s&#39;ha d
 
 ### 3.1.2 Petició – dades específiques
 
+![1](captures/1.png)
+
 
 
 | _Element_ | _Descripció_ |
@@ -92,6 +94,10 @@ El BOE requereix que tota operació relacionada amb una publicació vagi acompan
 | //anuncio/contenido/pieFirma/firmante | Càrrec i nom i dos cognoms del signatari. En els casos d&#39;actuació administrativa automatitzada pot consistir únicament en la identificació de l&#39;organisme o unitat signataria. En cas d&#39;alteració de la competència caldrà incloure les referències corresponents. |
 | //anuncio/contenidoCoof | Bloc de dades que conté la informació a publicar en el BOE en la llengua cooficial. Idèntica estructura a *//anuncio/contenido* però obvia el bloc pieFirma. |
 
+
+![2](captures/2.jpg)
+
+
 #### 3.1.2.2 Format del contingut de l&#39;anunci
 ---
  Contingut de l&#39;anunci composat de paràgrafs i taules. Com a mínim ha de contenir un paràgraf.
@@ -101,30 +107,29 @@ El BOE requereix que tota operació relacionada amb una publicació vagi acompan
 | _Element_ | _Descripció_ |
 | --- | --- |
 | //p | Paràgraf de text. |
-| //p@class | Informació per la presentació de la informació:<li>parrafo: per defecte.<li>titulo: paràgraf centrat amb un tipus de lletra major que el paràgraf per defecte.<li>pieFirma: paràgraf sense contingut. Representa la posició on s&#39;incorporarà el text de l&#39;element pieFirma. De no incloure&#39;s, el peu de signatura es presentarà a final del text.<li>page-break: paràgraf sense contingut. Força un salt de pàgina.|
-| //p/span | Permet marcar contingut a indexar si aquest no s&#39;ha informat en l&#39;element metadatos/notificados. |
-| //p/span@class | Indica el tipus de dada que s&#39;indexa:<li>index:NIF: el contingut marcat és un NIF. Cal informar-lo justificat amb zeros a l&#39;esquerra, sense punts, espais ni guions ni qualsevol caràcter que no sigui un número o lletra.<li>index:NAF: el contingut marcat és un NAF. Número d&#39;afiliació a la Seguretat Social.<li>index:CCC: el contingut marcat és un CCC. Compte corrent càrrec.<li>index:EXP: el contingut marcat és un número d&#39;expedient.<li>index:NOMBRE: el contingut marcat és un nom.|
+| //p@class | Informació per la presentació de la informació:<li>*parrafo*: per defecte.<li>*titulo*: paràgraf centrat amb un tipus de lletra major que el paràgraf per defecte.<li>*pieFirma*: paràgraf sense contingut. Representa la posició on s&#39;incorporarà el text de l&#39;element pieFirma. De no incloure&#39;s, el peu de signatura es presentarà a final del text.<li>*page-break*: paràgraf sense contingut. Força un salt de pàgina.|
+| //p/span | Permet marcar contingut a indexar si aquest no s&#39;ha informat en l&#39;element *metadatos/notificados*. |
+| //p/span@class | Indica el tipus de dada que s&#39;indexa:<li>*index:NIF*: el contingut marcat és un NIF. Cal informar-lo justificat amb zeros a l&#39;esquerra, sense punts, espais ni guions ni qualsevol caràcter que no sigui un número o lletra.<li>*index:NAF*: el contingut marcat és un NAF. Número d&#39;afiliació a la Seguretat Social.<li>*index:CCC*: el contingut marcat és un CCC. Compte corrent càrrec.<li>*index:EXP*: el contingut marcat és un número d&#39;expedient.<li>*index:NOMBRE*: el contingut marcat és un nom.|
 | //table | Taula de dades. |
 | //table/caption | Títol de la taula. |
 | //table/colgroup/col | Columnes de la taula. |
-| //table/colgroup/col@class | Permet marcat el contingut de la columna com a contingut a indexar:<li>index:NIF: el contingut marcat és un NIF. Cal informar-lo justificat amb zeros a l&#39;esquerra, sense punts, espais ni guions ni qualsevol caràcter que no sigui un número o lletra.<li> index:NAF: el contingut marcat és un NAF. Número d&#39;afiliació a la Seguretat Social.<li> index:CCC: el contingut marcat és un CCC. Compte corrent càrrec.<li>index:EXP: el contingut marcat és un número d&#39;expedient.<li>index:NOMBRE: el contingut marcat és un nom. |
+| //table/colgroup/col@class | Permet marcat el contingut de la columna com a contingut a indexar:<li>*index:NIF*: el contingut marcat és un NIF. Cal informar-lo justificat amb zeros a l&#39;esquerra, sense punts, espais ni guions ni qualsevol caràcter que no sigui un número o lletra.<li> *index:NAF*: el contingut marcat és un NAF. Número d&#39;afiliació a la Seguretat Social.<li> index:CCC: el contingut marcat és un CCC. Compte corrent càrrec.<li>*index:EXP*: el contingut marcat és un número d&#39;expedient.<li>*index:NOMBRE*: el contingut marcat és un nom. |
 | //table/thead | Capçalera de la taula. |
 | //table/thead/tr  | Fila de la capçalera. |
-| //table/thead/th | Cel·la de la capçalera:<li>@colspan: agrupació de colspan (número) columnes.<li>@rowspan: agrupació de rowspan (número) files. |
+| //table/thead/th | Cel·la de la capçalera:<li>*@colspan*: agrupació de *colspan* (número) columnes.<li>*@rowspan*: agrupació de *rowspan* (número) files. |
 | //table/tbody | Cos de la taula. |
 | //table/tbody/tr | Fila de la taula. |
-| //table/tbody/td | Cel·la de la taula:<li>@colspan: agrupació de colspan (número) columnes.<li>@rowspan: agrupació de rowspan (número) files. |
+| //table/tbody/td | Cel·la de la taula:<li>*@colspan*: agrupació de *colspan* (número) columnes.<li>*@rowspan*: agrupació de *rowspan* (número) files. |
 | //table/tfoot  | Peu de la taula. |
 | //table/tfoot/tr  | Fila del peu. |
-| //table/tfoot/td  | Cel·la del peu:<li>@colspan: agrupació de colspan (número) columnes.<li> @rowspan: agrupació de rowspan (número) files. |
+| //table/tfoot/td  | Cel·la del peu:<li>*@colspan*: agrupació de *colspan* (número) columnes.<li>*@rowspan*: agrupació de rowspan (número) files. |
 
-![](RackMultipart20211018-4-xdh4u_html_2d95fccdfcefac7.png)
+![3](captures/3.png)
 
-![](RackMultipart20211018-4-xdh4u_html_7de1dfa6dfdb5b29.gif)
-
+![4](captures/4.png)
 **Exemple de text amb paràgrafs**
 
-
+![5](captures/5.png)
 **Exemple de text amb taules**
 
 #### 3.1.2.3 Matèries
@@ -194,13 +199,15 @@ El BOE requereix que tota operació relacionada amb una publicació vagi acompan
 | /respostaEnviamentAnunci/resposta/anuncis/id | Identificador de l&#39;anunci de l&#39;ens remitent informat a la petició de publicació. |
 | /respostaEnviamentAnunci/resposta/anuncis/idBoe | Identificador de l&#39;anunci en el sistema del BOE proporcionat quan l&#39;anunci és processat correctament . |
 | /respostaEnviamentAnunci/resposta/anuncis/avisos/avis | Errors que ha presentat l&#39;anunci però que no impedeixen que l&#39;anunci es pugui processar. |
-| /respostaEnviamentAnunci/resposta/anuncis/avisos/avis/codi | Codi de l&#39;avís. Actualment només es retorna l&#39;avís AVISO\_ID\_ANUNCIO que es dona en el cas que s&#39;informa la URL de control (/envio/anuncios/urlSW) i no s&#39;informa l&#39;identificador d&#39;anunci en el sistema de l&#39;emissor (//anuncio/metadatos/id).|
+| /respostaEnviamentAnunci/resposta/anuncis/avisos/avis/codi | Codi de l&#39;avís. Actualment només es retorna l&#39;avís *AVISO\_ID\_ANUNCIO* que es dona en el cas que s&#39;informa la URL de control (*/envio/anuncios/urlSW*) i no s&#39;informa l&#39;identificador d&#39;anunci en el sistema de l&#39;emissor (*//anuncio/metadatos/id*).|
 | /respostaEnviamentAnunci/resposta/anuncis/avisos/avis/descripcio | Descripció de l&#39;avís. |
 | /respostaEnviamentAnunci/resposta/anuncis/errors/error | Errors que ha presentat l&#39;anunci i que impedeixen que l&#39;anunci es pugui processar i tractar l&#39;enviament complert. |
-| /respostaEnviamentAnunci/resposta/anuncis/errors/error/codi | Codi de l&#39;error.<li>ERROR\_EMISOR: no s&#39;ha habilitat a publicar els anuncis de l&#39;emissor a través de la plataforma del CAOC.<li> ERROR\_TABLAS: les cel·les de les taules del contingut estan mal calculades (rowspan i colspan).<li>ERROR\_FECHA\_FIRMA: la data del peu no pot ser posterior a la data del dia. |
+| /respostaEnviamentAnunci/resposta/anuncis/errors/error/codi | Codi de l&#39;error.<li>*ERROR\_EMISOR*: no s&#39;ha habilitat a publicar els anuncis de l&#39;emissor a través de la plataforma del CAOC.<li> *ERROR\_TABLAS*: les cel·les de les taules del contingut estan mal calculades (rowspan i colspan).<li>*ERROR\_FECHA\_FIRMA*: la data del peu no pot ser posterior a la data del dia. |
 | /respostaEnviamentAnunci/resposta/anuncis/errors/error/descripcio | Descripció de l&#39;error. |
-| /respostaEnviamentAnunci/resultat/codiResultat | Codi de resultat de la operació. <li>0: operació realitzada correctament.<li>0502: error realitzant l&#39;operació. |
+| /respostaEnviamentAnunci/resultat/codiResultat | Codi de resultat de la operació. <li>*0*: operació realitzada correctament.<li>*0502*: error realitzant l&#39;operació. |
 | /respostaEnviamentAnunci/resultat/descripcio | Descripció del resultat de la operació. |
+
+![6](captures/6.png)
 
 ## 3.2 Consulta d&#39;estat
 
@@ -209,28 +216,29 @@ El BOE requereix que tota operació relacionada amb una publicació vagi acompan
 | _Element_ | _Descripció_ |
 | --- | --- |
 | /peticioConsultaEstatAnunci/idEnviamentBoe | Identificador de l&#39;enviament proporcionat pel BOE en la operació de publicació. |
-| /peticioConsultaEstatAnunci/idBoe | Identificador de l&#39;anunci proporcionat pel BOE en la operació de publicació. Si no s&#39;informa, retornarà l&#39;estat dels anuncis de l&#39;enviament identificat per idEnviamentBoe. |
+| /peticioConsultaEstatAnunci/idBoe | Identificador de l&#39;anunci proporcionat pel BOE en la operació de publicació. Si no s&#39;informa, retornarà l&#39;estat dels anuncis de l&#39;enviament identificat per *idEnviamentBoe*. |
 
 ### 3.2.2 Resposta – dades específiques
 
 | _Element_ | _Descripció_ |
 | --- | --- |
-| /respostaConsultaEstatAnunci/anunci
- | Dades de l&#39;anunci. |
-| /respostaConsultaEstatAnunci/anunci/id | Identificador de l&#39;anunci de l&#39;ens origen informat a la petició de publicació. |
+| /respostaConsultaEstatAnunci/anunci | Dades de l&#39;anunci. |
+ | /respostaConsultaEstatAnunci/anunci/id | Identificador de l&#39;anunci de l&#39;ens origen informat a la petició de publicació. |
 | /respostaConsultaEstatAnunci/anunci/idBoe | Identificador de l&#39;anunci en el sistema del BOE proporcionat quan l&#39;anunci és processat correctament. |
 | /respostaConsultaEstatAnunci/anunci/idEnviamentBoe | Identificador de l&#39;enviament de la remesa proporcionat pel BOE quan la petició va ser processada correctament. |
-| /respostaConsultaEstatAnunci/anunci/estatBoe | Estat de l&#39;anunci:<li>PENDIENTE: anunci rebut pendent de signatura (aquest estat no es donarà mai si es fa l&#39;enviament per webservice).<li>ACEPTADO: anunci rebut, signat i preparat per a la seva tramitació.<li>RECIBIDO: l&#39;anunci ha entrat en el sistema intern de tramitació de la AEBOE.<li>ANULADO: l&#39;anunci ha estat anul·lat per l&#39;interessat. L&#39;anulació la fa sempre l&#39;ens emissor, inicialment accedint al portal del BOE.<li>DEVUELTO: l&#39;anunci ha estat rebujat pel BOE.<li>PUBLICADO: l&#39;anunci s&#39;ha publicat al BOE. |
+| /respostaConsultaEstatAnunci/anunci/estatBoe | Estat de l&#39;anunci:<li>*PENDIENTE*: anunci rebut pendent de signatura (aquest estat no es donarà mai si es fa l&#39;enviament per webservice).<li>*ACEPTADO*: anunci rebut, signat i preparat per a la seva tramitació.<li>*RECIBIDO*: l&#39;anunci ha entrat en el sistema intern de tramitació de la AEBOE.<li>*ANULADO*: l&#39;anunci ha estat anul·lat per l&#39;interessat. L&#39;anulació la fa sempre l&#39;ens emissor, inicialment accedint al portal del BOE.<li>*DEVUELTO*: l&#39;anunci ha estat rebujat pel BOE.<li>*PUBLICADO*: l&#39;anunci s&#39;ha publicat al BOE. |
 | /respostaConsultaEstatAnunci/anunci/nboBoe | Si s&#39;ha publicat, número de BOE en el que s&#39;ha publicat l&#39;anunci. Els butlletins estan identificats per un número dins de cada any. El número de butlletí és un número que s&#39;inicia cada any amb el valor 1 i es va incrementant amb cada nou butlletí. |
-| /respostaConsultaEstatAnunci/anunci/dataBoe | Si s&#39;ha publicat, data de publicació (AAAA-MM-DD). |
+| /respostaConsultaEstatAnunci/anunci/dataBoe | Si s&#39;ha publicat, data de publicació (*AAAA-MM-DD*). |
 | /respostaConsultaEstatAnunci/anunci/cveBoe | Si s&#39;ha publicat, codi segur de verificació electrònica del l&#39;anunci i identifica l&#39;anunci de forma unívoca en la seu del BOE. |
 | /respostaConsultaEstatAnunci/anunci/urlBoe | Si s&#39;ha publicat, URL on l&#39;anunci està publicat. |
 | /respostaConsultaEstatAnunci/anunci/motiusDevolucio | Bloc amb els motius de la devolució d&#39;un anunci. |
-| /respostaConsultaEstatAnunci/anunci/motiusDevolucio/motiu | Bloc que informa a l&#39;usuari el motiu pel que l&#39; AEBOE ha retornat un determinat anunci. Només es troba informat en el cas en que el camp estatBoe sigui DEVUELTO. |
+| /respostaConsultaEstatAnunci/anunci/motiusDevolucio/motiu | Bloc que informa a l&#39;usuari el motiu pel que l&#39; *AEBOE* ha retornat un determinat anunci. Només es troba informat en el cas en que el camp estatBoe sigui *DEVUELTO*. |
 | //motiusDevolucio/motiu/descripcio | Descripció del motiu de devolució de l&#39;anunci. |
 | //motiusDevolucio/motiu/observacio | Informació addicional de la devolució |
-| /respostaConsultaEstatAnunci/resultat/codiResultat | Codi de resultat de la operació.<li>0: operació realitzada correctament.<li>0502: error realitzant l&#39;operació. |
+| /respostaConsultaEstatAnunci/resultat/codiResultat | Codi de resultat de la operació.<li>*0*: operació realitzada correctament.<li>*0502*: error realitzant l&#39;operació. |
 | /respostaSConsultaEstatAnunci/resultat/descripcio | Descripció del resultat de la operació. |
+
+![7](captures/7.png)
 
 ## 3.3 Anul·lació
 ---
@@ -249,9 +257,13 @@ La operació d&#39;anul·lació d&#39;un anunci anul·larà la publicació de l&
 | /peticioAnullacioAnunci/idEnviamentBoe | Identificador de l&#39;enviament proporcionat pel BOE en la operació de publicació. |
 | /peticioAnullacioAnunci/idBoe | Identificador de l&#39;anunci proporcionat pel BOE en la operació de publicació. |
 
+![8](captures/8.png)
+
 ### 3.3.2 Resposta – dades específiques
+
+![9](captures/9.png)
 
 | _Element_ | _Descripció_ |
 | --- | --- |
-| /respostaAnullacioAnunci/resultat/codiResultat | Codi de resultat de la operació.<li> 0: operació realitzada correctament.<li>0502: error realitzant l&#39;operació. |
+| /respostaAnullacioAnunci/resultat/codiResultat | Codi de resultat de la operació.<li> *0*: operació realitzada correctament.<li>*0502*: error realitzant l&#39;operació. |
 | /respostaAnullacioAnunci/resultat/descripcio | Descripció del resultat de la operació. |
