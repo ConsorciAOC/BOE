@@ -31,7 +31,8 @@ A continuació es detalla la missatgeria corresponent al bloc de dades específi
 ## 3.1 Sol·licitud de publicació
 
 ---
-> Aquesta modalitat es serveix tant pel frontal síncron com asíncron però NO s'accepten lots de sol·licituds degut a que la pròpia definició de la missatgeria de l&#39;enviament ja suporta l'enviament d&#39;una remesa d'anuncis.
+![image](https://user-images.githubusercontent.com/32306731/137281698-9dfc2044-94f7-487f-a7d6-9a4e0707feb3.png) Aquesta modalitat es serveix tant pel frontal síncron com asíncron però NO s'accepten lots de sol·licituds degut a que la pròpia definició de la missatgeria de l&#39;enviament ja suporta l'enviament d&#39;una remesa d'anuncis.
+
 ---
 
 ### 3.1.1 Petició – dades genèriques
@@ -59,7 +60,7 @@ En cas de transferència per MTOM, el fitxer corresponent a la remesa s&#39;ha d
 El BOE requereix que tota operació relacionada amb una publicació vagi acompanyada d&#39;un XML amb les dades de la sol·licitud de publicació.
 
 ---
-> Els anuncis de notificació seran publicats dins dels tres dies hàbils següents a la data de recepció, exceptuant en casos d&#39;indisponiblitat tècnica, sol·licitud d&#39;un termini posterior per l&#39;ens remitent o que l&#39;anunci requereixi subsanació. A aquests efectes, els anuncis rebuts després de les 12:00 del divendres, dissabtes, dies festius, 24 i 31 de Desembre, es consideraran rebuts a les 8:00 hores del primer dia hàbil següent.<br><br> El BOE es publica tots els dies de l&#39;any a excepció dels diumenges.
+![image](https://user-images.githubusercontent.com/32306731/137281698-9dfc2044-94f7-487f-a7d6-9a4e0707feb3.png) Els anuncis de notificació seran publicats dins dels tres dies hàbils següents a la data de recepció, exceptuant en casos d&#39;indisponiblitat tècnica, sol·licitud d&#39;un termini posterior per l&#39;ens remitent o que l&#39;anunci requereixi subsanació. A aquests efectes, els anuncis rebuts després de les 12:00 del divendres, dissabtes, dies festius, 24 i 31 de Desembre, es consideraran rebuts a les 8:00 hores del primer dia hàbil següent.<br><br> El BOE es publica tots els dies de l&#39;any a excepció dels diumenges.
 
 ---
  
@@ -186,7 +187,7 @@ El BOE requereix que tota operació relacionada amb una publicació vagi acompan
 
 ### 3.1.3 Resposta – dades específiques
 ---
- L&#39;operació de publicació del servei del BOE no realitza càrregues parcials i en cas d&#39;error es rebutja l&#39;enviament complert.<br> Així, quan l&#39;enviament es processat correctament es retorna la informació resultant del procés per tots els anuncis que conformen l&#39;enviament i en cas que hi hagi errors, es retornar la informació de les incidències únicament per aquells anuncis afectats. 
+![image](https://user-images.githubusercontent.com/32306731/137281698-9dfc2044-94f7-487f-a7d6-9a4e0707feb3.png) L&#39;operació de publicació del servei del BOE no realitza càrregues parcials i en cas d&#39;error es rebutja l&#39;enviament complert.<br> Així, quan l&#39;enviament es processat correctament es retorna la informació resultant del procés per tots els anuncis que conformen l&#39;enviament i en cas que hi hagi errors, es retornar la informació de les incidències únicament per aquells anuncis afectats. 
 
 ---
  
