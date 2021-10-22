@@ -80,7 +80,7 @@ El BOE requereix que tota operació relacionada amb una publicació vagi acompan
 | //anuncio/metadatos/id | Identificador de l&#39;anunci en el sistema de l&#39;ens remitent. Tot i que és opcional, es recomana informar aquesta dada. |
 | //anuncio/metadatos/formPub | Forma de publicació: <br> <li>E: extracte <li>I: Íntegra |
 | //anuncio/metadatos/datosPersonales | L&#39;anunci conté dades de caire personal (*S/N*). |
-| //anuncio/metadatos/materias/materia@idMat |Identificador de matèria. Vegeu partat 3.1.1.3. |
+| //anuncio/metadatos/materias/materia@idMat |Identificador de matèria. (Vegeu partat 3.1.3.3.)[https://github.com/ConsorciAOC/BOE#3123-mat%C3%A8ries] |
 | //anuncio/metadatos/materias/lgt  | *S* si l&#39;anunci s&#39;ha de publicar conforme el disposat a l&#39;article 112 de la Ley 58/2003 (Ley General Tributaria). |
 | //anuncio/metadatos/procedimiento<br> //anuncio/metadatos/procedimiento@plural <br>  | Text lliure que permet construir de manera automatitzada el títol de l&#39;anunci i diferenciar els emesos en la mateixa data. No ha de contenir dades de caràcter personal.<br><br> Si l&#39;anunci inclou l&#39;element *procedimiento* el títol generat tindrà el següent format: <br><br>*[entitat emisora]. Anuncio de notificación de [data] en procedimiento[s] [procedimiento].*<br><br> Si l&#39;anunci no informa l&#39;element es generarà el següent títol per defecte: <br><br>*[entitat emisora]. Anuncio de notificación de [data].*<br><br> L&#39;atribut plural (*S/N*) indicarà si cal emprar-se el plural en la paraula procediment.<br><br> La data que s&#39;emprarà a l&#39;hora de composar el títol de l&#39;anunci és la informada a *//pieFirma/fecha.*|
 | //anuncio/metadatos/notificados  | Inclou la informació dels notificats si no és possible marcar-los dins de l&#39;element *//contenido/texto.* <br><br> Els elements informats al bloc *notificados* no es reflecteixen de cap manera al PDF de l&#39;anunci i el BOE els usa internament per les cerques. El fet d&#39;identificar el NIF dels notificats permet que el BOE dongui un servei de cerca als usuaris que disposen de certificat i desitgin ser avisats de la publicació d&#39;una notificació amb el seu NIF. |
@@ -89,7 +89,7 @@ El BOE requereix que tota operació relacionada amb una publicació vagi acompan
 | //anuncio/metadatos/notificados/notificado@tipId  | Tipus del document d&#39;identificació del notificat (*NIF, NAF, EXP o CCC*). |
 | //anuncio/contenido | Bloc de dades que conté la informació a publicar en el BOE. |
 | //anuncio/contenido/texto@content-type | *application/xml* |
-| //anuncio/contenido/texto | Contingut de l&#39;anunci composat de paràgrafs i taules. Vegeu apartat 3.1.1.2. |
+| //anuncio/contenido/texto | Contingut de l&#39;anunci composat de paràgrafs i taules.|
 | //anuncio/contenido/pieFirma/lugar | Població on té lloc la signatura. |
 | //anuncio/contenido/pieFirma/fecha | Data de la signatura en format *AAAA-MM-DD*. La data del peu no pot ser posterior a la data del dia.|
 | //anuncio/contenido/pieFirma/firmante | Càrrec i nom i dos cognoms del signatari. En els casos d&#39;actuació administrativa automatitzada pot consistir únicament en la identificació de l&#39;organisme o unitat signataria. En cas d&#39;alteració de la competència caldrà incloure les referències corresponents. |
