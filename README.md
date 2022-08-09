@@ -3,7 +3,24 @@ Documentació d'integració del servei BOE del Consorci AOC
 
 ## **BOE - Tablón Edictal Único**
 
-# 1 Introducció
+- [1. Introducció](#1)
+- [2. Transmissions de dades disponibles](#2)
+- [3. Missatgeria del servei](#3)
+   * [3.1 Sol·licitud de publicació](#3.1)
+        * [3.1.1 Petició – dades genèriques](#3.1.1)
+		* [3.1.2 Petició – dades específiques](#3.1.2)	
+			* [3.1.2.1 Remesa de petició de publicació d&#39;anuncis](#3.1.2.1)
+			* [3.1.2.2 Format del contingut de l&#39;anunci](#3.1.2.2)
+			* [3.1.2.3 Matèries](#3.1.2.3)
+		* [3.1.3 Resposta – dades específiques](#3.1.3)
+   * [3.2 Consulta d&#39;estat](#3.2)
+        * [3.2.1 Petició – dades específiques](#3.2.1)
+		* [3.2.2 Resposta – dades específiques](#3.2.2)
+   * [3.3 Anul·lació](#3.3)
+		* [3.3.1 Petició – dades específiques](#3.3.1)
+		* [3.3.2 Resposta – dades específiques](#3.3.2)
+
+# 1 Introducció <a name="1"></a>
 
 Aquest document detalla la missatgeria associada al servei de publicació del Tablón Edictal Único del BOE (en endavant TEU).
 
@@ -11,7 +28,7 @@ Per poder realitzar la integració cal conèixer prèviament la següent documen
 
 - [Document d&#39;_Especificació de missatgeria pel consum de productes de la plataforma PCI_ del Consorci AOC.](https://github.com/ConsorciAOC/PCI)
 
-# 2 Transmissions de dades disponibles
+# 2 Transmissions de dades disponibles <a name="2"></a>
 
 Les operacions disponibles a través del servei són les que es presenten a continuació:
 
@@ -24,18 +41,18 @@ Les operacions disponibles a través del servei són les que es presenten a cont
 | **BOE** | BOE | Operacions del servei de publicació del BOE:<ul><li>Sol·licitud de publicació d&#39;un anunci.</li><li>Consulta d&#39;estat d&#39;enviaments i anuncis que s&#39;han enviat.</li><li>Anul·lació de publicació.</li>|
 
 
-# 3 Missatgeria del servei
+# 3 Missatgeria del servei <a name="3"></a>
 
 A continuació es detalla la missatgeria corresponent al bloc de dades específiques de les diferents operacions del servei.
 
-## 3.1 Sol·licitud de publicació
+## 3.1 Sol·licitud de publicació <a name="3.1"></a>
 
 ---
 ![image](https://user-images.githubusercontent.com/32306731/137281698-9dfc2044-94f7-487f-a7d6-9a4e0707feb3.png) Aquesta modalitat es serveix tant pel frontal síncron com asíncron però NO s'accepten lots de sol·licituds degut a que la pròpia definició de la missatgeria de l&#39;enviament ja suporta l'enviament d&#39;una remesa d'anuncis.
 
 ---
 
-### 3.1.1 Petició – dades genèriques
+### 3.1.1 Petició – dades genèriques <a name="3.1.1"></a>
 
 En cas de transferència per MTOM, el fitxer corresponent a la remesa s&#39;ha de referenciar al bloc de dades //Ficheros/Fichero de les dades genèriques de la sol·licitud.
 
@@ -44,7 +61,7 @@ En cas de transferència per MTOM, el fitxer corresponent a la remesa s&#39;ha d
 | //Ficheros/Fichero/Contenido | <DT> XML codificat en Base64 amb la informació dels anuncis a publicar en cas de transferència per MTOM (en la crida correspon a la referència XOP del fitxer). El contingut del XML ha d&#39;estar codificat en UTF-8.<DT> El BOE recomana una grandària màxima de 2MB tot i que el servei del CAOC accepta fins a una grandària de 10MB.<DT>Per més detalls sobre l&#39;estructura del XML consulteu l&#39;apartat 3.1.2.1 d&#39;aquest document. |
 | //Ficheros/Fichero/Id | Identificador del fitxer referenciat a la missatgeria específica (//peticioEnviamentAnunci/id).|
 
-### 3.1.2 Petició – dades específiques
+### 3.1.2 Petició – dades específiques <a name="3.1.2"></a>
 
 ![1](captures/1.png)
 
@@ -55,7 +72,7 @@ En cas de transferència per MTOM, el fitxer corresponent a la remesa s&#39;ha d
 | /peticioEnviamentAnunci/enviament | XML codificat en Base64 amb la informació dels anuncis a publicar. El contingut del XML ha d&#39;estar codificat en UTF-8 i amb una grandària màxima de 500KB si el XML s&#39;incrusta en la petició. <br><br> Per més detalls sobre l&#39;estructura del XML consulteu l&#39;apartat 3.1.2.1 d&#39;aquest document. |
 | /peticioEnviamentAnunci/id | Remesa referenciada al bloc de dades [Ficheros](https://github.com/ConsorciAOC/PCI) de les dades genèriques de la sol·licitud. <br><br> Així, aquest element id s&#39;ha de correspondre amb l&#39;element Fichero/Id on s&#39;especifica les dades per recuperar el contingut del document. |
 
-#### 3.1.2.1 Remesa de petició de publicació d&#39;anuncis
+#### 3.1.2.1 Remesa de petició de publicació d&#39;anuncis <a name="3.1.2.1"></a>
 
 El BOE requereix que tota operació relacionada amb una publicació vagi acompanyada d&#39;un XML amb les dades de la sol·licitud de publicació.
 
@@ -99,7 +116,7 @@ El BOE requereix que tota operació relacionada amb una publicació vagi acompan
 ![2](captures/2.jpg)
 
 
-#### 3.1.2.2 Format del contingut de l&#39;anunci
+#### 3.1.2.2 Format del contingut de l&#39;anunci <a name="3.1.2.2"></a>
 ---
  Contingut de l&#39;anunci composat de paràgrafs i taules. Com a mínim ha de contenir un paràgraf.
 
@@ -133,7 +150,7 @@ El BOE requereix que tota operació relacionada amb una publicació vagi acompan
 ![5](captures/5.png)
 **Exemple de text amb taules**
 
-#### 3.1.2.3 Matèries
+#### 3.1.2.3 Matèries <a name="3.1.2.3"></a>
 
 | _Codi_ | _Descripció_ |
 | --- | --- |
@@ -185,7 +202,7 @@ El BOE requereix que tota operació relacionada amb una publicació vagi acompan
 | 46 | OTRAS |
 | 47 | INSCRIPCIÓN, AFILIACIÓN Y RECAUDACIÓN DE LA SEGURIDAD SOCIAL |
 
-### 3.1.3 Resposta – dades específiques
+### 3.1.3 Resposta – dades específiques <a name="3.1.3"></a>
 ---
 ![image](https://user-images.githubusercontent.com/32306731/137281698-9dfc2044-94f7-487f-a7d6-9a4e0707feb3.png) L&#39;operació de publicació del servei del BOE no realitza càrregues parcials i en cas d&#39;error es rebutja l&#39;enviament complert.<br> Així, quan l&#39;enviament es processat correctament es retorna la informació resultant del procés per tots els anuncis que conformen l&#39;enviament i en cas que hi hagi errors, es retornar la informació de les incidències únicament per aquells anuncis afectats. 
 
@@ -210,16 +227,16 @@ El BOE requereix que tota operació relacionada amb una publicació vagi acompan
 
 ![6](captures/6.png)
 
-## 3.2 Consulta d&#39;estat
+## 3.2 Consulta d&#39;estat <a name="3.2"></a>
 
-### 3.2.1 Petició – dades específiques
+### 3.2.1 Petició – dades específiques <a name="3.2.1"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
 | /peticioConsultaEstatAnunci/idEnviamentBoe | Identificador de l&#39;enviament proporcionat pel BOE en la operació de publicació. |
 | /peticioConsultaEstatAnunci/idBoe | Identificador de l&#39;anunci proporcionat pel BOE en la operació de publicació. Si no s&#39;informa, retornarà l&#39;estat dels anuncis de l&#39;enviament identificat per *idEnviamentBoe*. |
 
-### 3.2.2 Resposta – dades específiques
+### 3.2.2 Resposta – dades específiques <a name="3.2.2"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
@@ -241,7 +258,7 @@ El BOE requereix que tota operació relacionada amb una publicació vagi acompan
 
 ![7](captures/7.png)
 
-## 3.3 Anul·lació
+## 3.3 Anul·lació <a name="3.3"></a>
 ---
 L&#39;operació d&#39;anul·lació d&#39;un enviament anul·larà tots els anuncis de l&#39;enviament. Si es produeix un error en el procés, el BOE rebutjarà la petició d&#39;anul·lació i en cap cas es realitzaran anul·lacions parcials.
 
@@ -251,7 +268,7 @@ La operació d&#39;anul·lació d&#39;un anunci anul·larà la publicació de l&
 
 ---
 
-### 3.3.1 Petició – dades específiques
+### 3.3.1 Petició – dades específiques <a name="3.3.1"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
@@ -260,7 +277,7 @@ La operació d&#39;anul·lació d&#39;un anunci anul·larà la publicació de l&
 
 ![8](captures/8.png)
 
-### 3.3.2 Resposta – dades específiques
+### 3.3.2 Resposta – dades específiques <a name="3.3.2"></a>
 
 ![9](captures/9.png)
 
